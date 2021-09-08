@@ -1,12 +1,12 @@
 {
     "homepage": "http://mamedev.org",
     "description": "Arcade machine emulator",
-    "version": "0.233",
+    "version": "0.235",
     "license": "GPL-2.0-or-later",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/mamedev/mame/releases/download/mame0233/mame0233b_64bit.exe#/dl.7z",
-            "hash": "af41c1fda20d9286f2a76fea63b0f827926ac46c1b8c4356c6fb968df12aa1e4",
+            "url": "https://github.com/mamedev/mame/releases/download/mame0235/mame0235b_64bit.exe#/dl.7z",
+            "hash": "e7f3603631e9114a455364645716281c56bd70aab0b0053b9410ac0a0b502cbb",
             "pre_install": [
                 "if(!(Test-Path \"$persist_dir\\mame.ini\")) {",
                 "   Start-Process \"$dir\\mame.exe\" -WorkingDirectory \"$dir\" -ArgumentList \"-createconfig\"",

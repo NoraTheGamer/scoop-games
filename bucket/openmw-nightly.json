@@ -1,12 +1,12 @@
 {
     "homepage": "http://openmw.org/",
     "description": "An open-source open-world RPG game engine that supports playing Morrowind. (nightly version)",
-    "version": "20210715-f403b464",
+    "version": "20210907-aef6ec46",
     "license": "GPL-3.0-or-later",
     "architecture": {
         "64bit": {
-            "url": "https://gitlab.com/OpenMW/openmw/-/jobs/1426276771/artifacts/download#/dl.7z",
-            "hash": "bffd829e8f6630b9e477c809d0e1ad5731604d82b2d8ba952156aaec008096c3"
+            "url": "https://gitlab.com/OpenMW/openmw/-/jobs/1568157806/artifacts/download#/dl.7z",
+            "hash": "ded3287bbdc64bd9178d08f3d3a941572e6ffc27b0385579cc0df1be6a2bb992"
         }
     },
     "pre_install": "Expand-ZipArchive \"$dir\\OpenMW_MSVC2019_64_Engine_Release_*.zip\" \"$dir\"",
@@ -36,7 +36,7 @@
     "notes": "Please run the OpenMW Launcher in the start menu to configure the game data path. Otherwise, OpenMW won't start correctly.",
     "checkver": {
         "url": "https://gitlab.com/OpenMW/openmw/-/jobs",
-        "regex": ">(?<commit>[0-9a-f]{8})(?:.*\\n){16}Windows_Ninja_Engine_Release(?:.*\\n){10}.*?datetime=\"(?<year>[0-9]{4})-(?<month>[0-9]{2})-(?<day>[0-9]{2})(?:.*\\n){8}.*?\\/OpenMW\\/openmw\\/-\\/jobs\\/(?<job>[0-9]{10})(?:.*\\n){8}passed",
+        "regex": "\\/commit\\/[0-9a-f]{40}\">(?<commit>[0-9a-f]{8})<\\/a>(?:.*\\n){23}.*datetime=\"(?<year>[0-9]{4})-(?<month>[0-9]{2})-(?<day>[0-9]{2})(?:.*\\n){16}passed(?:.*\\n){4}.*(?<job>[0-9]{10})\">Windows_Ninja_Engine_Release",
         "replace": "${year}${month}${day}-${commit}"
     },
     "autoupdate": {
